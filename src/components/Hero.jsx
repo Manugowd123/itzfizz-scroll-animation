@@ -35,19 +35,28 @@ export default function Hero() {
       })
 
       scrollTl
+        .fromTo(
+          '.hero-main-visual',
+          {
+            x: -200,
+            y: 4,
+            rotation: -2.5,
+            scale: 0.98
+          },
+          {
+            x: 0,
+            y: -10,
+            rotation: 0,
+            scale: 1.04,
+            ease: 'power1.out'
+          }
+        )
         .to('.hero-main-visual', {
-          x: 110,
-          y: -18,
-          rotation: -3.5,
-          scale: 1.04,
-          ease: 'power1.inOut'
-        })
-        .to('.hero-main-visual', {
-          x: 220,
-          y: -6,
-          rotation: 2,
-          scale: 1.08,
-          ease: 'power1.out'
+          x: 200,
+          y: 0,
+          rotation: 2.5,
+          scale: 1,
+          ease: 'power1.in'
         })
     })
 
@@ -64,19 +73,28 @@ export default function Hero() {
       })
 
       scrollTl
-        .to('.hero-main-visual', {
-          x: 22,
-          y: -8,
-          rotation: -1.5,
-          scale: 1.03,
-          ease: 'power1.inOut'
-        })
+        .fromTo(
+          '.hero-main-visual',
+          {
+            x: -45,
+            y: 2,
+            rotation: -1.5,
+            scale: 0.98
+          },
+          {
+            x: 0,
+            y: -5,
+            rotation: 0,
+            scale: 1.03,
+            ease: 'power1.out'
+          }
+        )
         .to('.hero-main-visual', {
           x: 45,
-          y: -2,
-          rotation: 1,
-          scale: 1.05,
-          ease: 'power1.out'
+          y: 0,
+          rotation: 1.5,
+          scale: 1,
+          ease: 'power1.in'
         })
     })
 
@@ -113,7 +131,7 @@ export default function Hero() {
               <img
                 src={`${import.meta.env.BASE_URL}assets/car.png`}
                 alt="McLaren 720S supercar top view in papaya orange"
-                className="hero-main-visual max-h-32 sm:max-h-48 md:max-h-56 lg:max-h-60 max-w-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] filter select-none pointer-events-none will-change-transform"
+                className="hero-main-visual max-h-28 sm:max-h-44 md:max-h-52 lg:max-h-56 max-w-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] filter select-none pointer-events-none will-change-transform"
               />
             </div>
           </div>
